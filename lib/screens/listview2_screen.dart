@@ -8,20 +8,18 @@ class Listview2Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Listview1 Tipo 2')),
-      body: ListView(
-        children: [
-          ...options.map(
-                (e) => ListTile(
-                  trailing: Icon(Icons.arrow_forward_ios_outlined),
-                  title: Text(e),
-                ),
-              ).toList(),
-
-              
-          /*
-          
-*/
-        ],
+      body: ListView.separated(
+      itemBuilder: (BuildContext context, int index) => ListTile(
+        trailing: Icon(Icons.arrow_forward_ios_outlined),
+        title: Text(options[index]),
+        onTap: () {
+          final version=options[index];
+          print(version);
+        },
+      ),
+      separatorBuilder: (BuildContext context, int index) => Divider(), 
+      itemCount: options.length,
+       
       ),
     );
   }
