@@ -1,9 +1,6 @@
-import 'package:calculadora_eduardo/screens/alert_screen.dart';
-import 'package:calculadora_eduardo/screens/card_screen.dart';
-import 'package:calculadora_eduardo/screens/home_screen.dart';
-import 'package:calculadora_eduardo/screens/listview1_screen.dart';
-import 'package:calculadora_eduardo/screens/listview2_screen.dart';
 import 'package:flutter/material.dart';
+
+import 'screens/screens.dart';
 
 void main() => runApp(const MyApp());
 
@@ -15,14 +12,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: Listview2Screen(),
+      //home: Listview2Screen(),
+      initialRoute: 'home',
       routes: {
         'listview1':(BuildContext context)=>Listview1Screen(),
         'listview2':(BuildContext context)=>Listview2Screen(),
         'alert':(BuildContext context)=>AlertScreen(),
         'card':(BuildContext context)=>CardScreen(),
         'home':(BuildContext context)=>HomeScreen(),
-
+      },
+      onGenerateRoute: (settings) {
+        return MaterialPageRoute(builder: (context)=> AlertScreen()
+        );
       },
     );
   }
