@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Componentes de Fluter'),
         elevation: 30,
-        backgroundColor: const Color.fromARGB(131, 68, 137, 255),
+        //backgroundColor: const Color.fromARGB(131, 68, 137, 255),
       ),
     body: ListView.separated(
         itemBuilder: (context, index) => ListTile(

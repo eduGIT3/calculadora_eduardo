@@ -1,4 +1,5 @@
 import 'package:calculadora_eduardo/routes/app_routes.dart';
+import 'package:calculadora_eduardo/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/screens.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       initialRoute: AppRoutes.initialRoute,
       routes: AppRoutes.getAppRoutes(),
       onGenerateRoute: AppRoutes.onGenerateRute,
+      theme: AppTheme.lightTheme,
     );
   }
 }
