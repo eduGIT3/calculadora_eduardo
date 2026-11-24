@@ -14,7 +14,11 @@ class CardScreen extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         children: [
-          CustomCardTipo1()
+          CustomCardTipo1(),
+          SizedBox(
+            height: 20,
+          ),
+          CustomCardTipo2()
         ],
       )
     );
